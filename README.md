@@ -1,7 +1,7 @@
-# meadowlark
+# Meadowlark
 The Meadowlark Travel Website with NodeJS and Express
 
-# NODE - INSTALANDO ATRAVÉS DO (NVM)
+# NODE - Instalando através de NVM
 
 O legal do NVM é que você pode instalar várias versões do Node e ficar alternando entre elas, mas antes de instalar o NVM precisamos de alguns pacotes de dependências que já estão no repositório de sua distribuição Debian Based.
 
@@ -30,11 +30,13 @@ No nosso caso, utilizamos a versão acima.
 Um Framework web rápido, flexível e minimalista para Node.js
 
 Para instalar o Express no Linux:
+
 npm install --save express
 
 # Engine HTML - express3-handlebars
 
 Para instalar fazemos:
+
 npm install --save express3-handlebars
 
 
