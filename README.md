@@ -18,7 +18,7 @@ Para visualizar as versões disponíveis, fazemos:
 
 nvm ls-remote
 
-A partir da versão mais recente, voê executa o comando:
+A partir da versão mais recente, deve-se executar o comando:
 
 nvm install v6.11.2
 
