@@ -40,4 +40,19 @@ Para instalar fazemos:
 npm install --save express3-handlebars
 
 
+# Instalando Mocha para Test page
+
+npm install --save-dev mocha
+
+Depois fazemos,
+
+mkdir public/vendor
+
+cp node_modules/mocha/mocha.js public/vendor
+cp node_modules/mocha/mocha.css public/vendor
+
+# Para utilizar a funcionalidade de Assert
+
+npm install --save-dev chai
+cp node_modules/chai/chai.js public/vendor
 

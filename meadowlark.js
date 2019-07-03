@@ -2,6 +2,10 @@ var express = require('express');
 var app = express();
 
 var fortune = require('./lib/fortune.js');
+var tours = [
+				{ id: 0, name: 'Hood River', price: 99.99 },
+				{ id: 1, name: 'Oregon Coast', price: 149.95 },
+			];
 
 //set up handlebars view engine
 var handlebars = require('express3-handlebars').create({ defaultLayout: 'main' });
@@ -11,6 +15,11 @@ app.set('view engine', 'handlebars');
 
 app.set('port', process.env.PORT || 3000);
 
+app.use(function(req, res, next){	
+	res.locals.showTest = app.get('env') !== 'production' && req.query.test === '1';
+	next();
+});
+
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
@@ -18,7 +27,14 @@ app.get('/', function(req, res){
 });
 
 app.get('/about', function(req, res){
-	res.render('about', { fortune: fortune.getFortune() });
+	res.render('about', { 
+		fortune: fortune.getFortune() ,
+		pageTestScript: '/qa/tests-about.js'
+	});
+});
+
+app.get('/api/tours', function(req, res){
+	res.json(tours);
 });
 
 //custom page
